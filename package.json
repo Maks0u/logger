@@ -1,0 +1,13 @@
+{
+    "name": "logger",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {},
+    "author": "Maks0u",
+    "license": "MIT",
+    "dependencies": {
+        "winston": "^3.8.2"
+    }
+}
