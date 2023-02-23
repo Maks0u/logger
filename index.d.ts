@@ -1,5 +1,5 @@
 import { Logger } from 'winston';
-const logger: Logger;
+declare const logger: Logger;
 export default logger;
 export function colorize(colors: string[], text: string): string;
 export function bold(text: string): string;
