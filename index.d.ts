@@ -5,9 +5,11 @@ export function colorize(colors: string[], text: string): string;
 export function bold(text: string): string;
 export function dim(text: string): string;
 export function boldDim(text: string): string;
-export function white(text: string): string;
+export function italic(text: string): string;
+export function inverse(text: string): string;
 export function red(text: string): string;
 export function green(text: string): string;
+export function white(text: string): string;
 export const ColorCodes: {
     reset: string;
     bold: string;

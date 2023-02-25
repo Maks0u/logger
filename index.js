@@ -50,8 +50,7 @@ export default winston.createLogger({
     transports: transports(process.env.LOG_LEVEL),
 });
 export function colorize(colors, text) {
-    const reset = '0';
-    return `\x1b[0m\x1b[${colors.reduce((a, b) => `${a};${b}`)}m${text}\x1b[${reset}m`;
+    return `\x1b[0m\x1b[${colors.reduce((a, b) => `${a};${b}`)}m${text}\x1b[0m`;
 }
 export function bold(text) {
     return colorize([ColorCodes.bold], text);
@@ -62,14 +61,20 @@ export function dim(text) {
 export function boldDim(text) {
     return colorize([ColorCodes.bold, ColorCodes.dim], text);
 }
-export function white(text) {
-    return colorize([ColorCodes.reset], text);
+export function italic(text) {
+    return colorize([ColorCodes.italic], text);
+}
+export function inverse(text) {
+    return colorize([ColorCodes.inverse], text);
 }
 export function red(text) {
     return colorize([ColorCodes.red], text);
 }
 export function green(text) {
     return colorize([ColorCodes.green], text);
+}
+export function white(text) {
+    return colorize([ColorCodes.white], text);
 }
 export const ColorCodes = {
     reset: '0',
