@@ -50,7 +50,7 @@ export default winston.createLogger({
     transports: transports(process.env.LOG_LEVEL),
 });
 export function colorize(colors, text) {
-    return `\x1b[0m\x1b[${colors.reduce((a, b) => `${a};${b}`)}m${text}\x1b[0m`;
+    return `\x1b[0m\x1b[${colors.reduce((a, b) => `${a};${b}`)}m${text}\x1b[0;2m`;
 }
 export function bold(text) {
     return colorize([ColorCodes.bold], text);
